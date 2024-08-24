@@ -1,0 +1,207 @@
+/* Styles globaux */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-size: 16px; /* Taille de police par défaut */
+  line-height: 1.5; /* Hauteur de ligne pour améliorer la lisibilité */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2rem; /* Taille de police pour les titres principaux */
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Taille de police pour les sous-titres */
+}
+
+/* Styles pour le formulaire */
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1rem; /* Taille de police pour les labels */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem; /* Taille de police pour les champs de formulaire */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles pour le tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: auto; /* Permet d'ajuster automatiquement la largeur des colonnes */
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem; /* Taille de police pour le tableau */
+  word-wrap: break-word; /* Assure que le texte long est bien géré */
+}
+
+th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style pour le bouton de suppression */
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Media Queries pour le responsive design */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      padding: 1rem;
+  }
+
+  .form-container {
+      padding: 1rem;
+  }
+
+  .form-group {
+      margin-bottom: 1rem;
+  }
+
+  button {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+  }
+
+  table {
+      font-size: 0.875rem;
+  }
+
+  th,
+  td {
+      padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      width: 100%;
+      padding: 0.5rem;
+  }
+
+  .form-container {
+      padding: 0.5rem;
+  }
+
+  .form-group {
+      margin-bottom: 0.75rem;
+  }
+
+  .form-group input,
+  .form-group select {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+  }
+
+  button {
+      padding: 0.5rem;
+      font-size: 0.75rem;
+  }
+
+  table {
+      font-size: 0.75rem;
+      overflow-x: auto; /* Permet de faire défiler le tableau horizontalement si nécessaire */
+      display: block; /* Assure que le tableau est affiché comme un bloc pour le défilement horizontal */
+  }
+
+  th,
+  td {
+      padding: 0.5rem;
+      white-space: nowrap; /* Empêche les cellules de se décomposer en plusieurs lignes */
+  }
+
+  .delete-button {
+      padding: 0.5rem 0.5rem;
+      font-size: 0.75rem;
+  }
+}

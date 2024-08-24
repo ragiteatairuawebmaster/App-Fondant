@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApp Formulaire vers Tableau</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Vente de fondant</h1>
+        <form id="myForm" class="form-container">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>Facebook :</label>
+                <input type="text" id="facebook" name="facebook">
+            </div>
+            <div class="form-group">
+                <label for="phone">Téléphone :</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{8}" maxlength="8" placeholder="Téléphone">
+            </div>
+            <div class="form-group">
+                <label for="address">Adresse :</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="hours">Horaire :</label>
+                <input type="time" id="hours" name="hours">
+            </div>
+            <div class="form-group">
+                <label for="day">Jour :</label>
+                <select id="day" name="day">
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="30 à confirmer">30 à confirmer</option>
+                    <option value="31 à confirmer">31 à confirmer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantité :</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="paid">Payé :</label>
+                <select id="paid" name="paid">
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select>
+            </div>
+            <button type="submit">Ajouter</button>
+        </form>
+
+        <h2>Données du formulaire</h2>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Facebook</th>
+                    <th>Téléphone</th>
+                    <th>Adresse</th>
+                    <th>Horaire</th>
+                    <th>Jour</th>
+                    <th>Quantité</th>
+                    <th>Payé</th>
+                    <th>Action</th> <!-- Nouvelle colonne pour les actions -->
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
